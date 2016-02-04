@@ -7,8 +7,20 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+	<div class="container-fluid">
+		<div class="row">
+			<header>
+				<div class="col-xs-3">LOGO</div>
+				<div class="col-xs-4">Pithy nuggets of potential wisdom</div>
+			</header>
+			<nav>
+				<div class="col-xs-5">
+					<%= link_to("Contribute Quote", "#") %>
+					<%= link_to("About", "#") %>
+				</div>
+			</nav>	
+		</div>
+		<%= yield %>
+	</div>
 </body>
 </html>

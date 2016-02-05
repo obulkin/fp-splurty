@@ -16,4 +16,4 @@
 /tmp
 
 #Ignore OS X folder attribute files
-/.DS_Store
+.DS_Store

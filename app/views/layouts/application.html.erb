@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Splurty</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
+	<title>Splurty</title>
+	<%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+	<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+	<%= csrf_meta_tags %>
 </head>
 <body>
 	<div class="container-fluid">
@@ -30,6 +30,13 @@
 					<%= link_to("About", "#") %>
 				</div>
 			</nav>	
+		</div>
+		<div class="row">
+			<% if flash[:error] %>
+				<div class="col-xs-10 col-xs-offset-1 alert alert-danger" role="alert">
+					<%= flash[:error] %>
+				</div>
+			<% end %>
 		</div>
 	</div>
 	<%= yield %>

@@ -9,12 +9,15 @@ class QuotesController < ApplicationController
 	end
 
 	def create
-		Quote.create(quote_params())
+		@quote = Quote.new(quote_params())
+		unless(@quote.save)
+			flash[:error] = "Your submission <strong>could not</strong> be saved because the data you entered is invalid. Both fields should be completed, and the maximum length for each is 300 characters.".html_safe
+		end
 		redirect_to(root_path())
 	end
 
 	private
 	def quote_params
-		params.require(:quote).permit(:quote, :author)
+		params.require(:quote).permit(:saying, :author)
 	end
 end

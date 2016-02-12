@@ -1,4 +1,7 @@
 source 'https://rubygems.org'
+# Simplify form creation
+gem "simple_form"
+
 # Make sure Sprockets version is new enough to support Bootstrap 3
 gem 'sprockets-rails', '>= 2.2'
 

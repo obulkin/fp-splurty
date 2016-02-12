@@ -11,33 +11,37 @@
 		<div class="row header-row">
 			<header>
 				<div class="col-xs-2">
-					<div class="circle">
-						<br>
-						COGITO
-						<br>
-						ERGO
-						<br>
-						SUM
-					</div>
+					<%= link_to(root_path(), class: "logo") do %>
+						<div class="circle">
+							<br>
+							COGITO
+							<br>
+							ERGO
+							<br>
+							SUM
+						</div>
+					<% end %>
 				</div>
 				<div class="col-xs-5 slogan">Splurting out pithy nuggets of potential wisdom...</div>
 			</header>
 			<nav>
 				<div class="col-xs-5 links">
-					<%= link_to("Contribute Quote", "#") %>
+					<%= link_to("Contribute Quote", new_quote_path()) %>
 					<%= link_to("About", "#") %>
 				</div>
 			</nav>	
 		</div>
-		<%= yield %>
 	</div>
+	<%= yield %>
 	<footer class="footer">
 		<div class="container-fluid">
-			<div class="col-xs-6">
-				<%= link_to("May I have some more, sir?", "#", class: "next-quote") %>
-			</div>
-			<div class="col-xs-6 footer-blurb">
-				Cobbled together in San Francisco, CA by <a href="https://www.linkedin.com/in/obulkin">Oleg Bulkin</a>
+			<div class="row">
+				<div class="col-xs-6">
+					<%= link_to("May I have some more, sir?", root_path(), class: "next-quote") %>
+				</div>
+				<div class="col-xs-6 footer-blurb">
+					Cobbled together in San Francisco, CA by <a href="https://www.linkedin.com/in/obulkin">Oleg Bulkin</a>
+				</div>
 			</div>
 		</div>
 	</footer>

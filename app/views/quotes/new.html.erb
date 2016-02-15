@@ -1,9 +1,0 @@
-<div class="container-fluid">
-	<h1>Enter Your Quote Details</h1>
-	<%= simple_form_for(@quote, wrapper: :vertical_form) do |f| %>
-		<%= f.input(:saying, label: "Quote") %>
-		<%= f.input(:author) %>
-		<br>
-		<%= f.button(:submit, "Submit", class: "btn-danger submit-button") %>
-	<% end %>
-</div>

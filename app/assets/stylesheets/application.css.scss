@@ -62,13 +62,16 @@
 	font-weight: bold;
 }
 
-
 .links a:hover {
 	color: white;
 	background-color: #888888;
 }
 
-.logo:hover {
+.links a:focus {
+    outline: none;
+}
+
+.logo:hover, .logo:focus {
     text-decoration: none;
 }
 

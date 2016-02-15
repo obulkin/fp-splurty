@@ -4,10 +4,6 @@ class QuotesController < ApplicationController
 		@quote = Quote.offset(random_offset).first
 	end
 
-	def new
-		@quote = Quote.new
-	end
-
 	def create
 		@quote = Quote.new(quote_params())
 		unless(@quote.save)

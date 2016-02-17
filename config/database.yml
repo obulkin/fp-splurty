@@ -56,8 +56,4 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: splurty_production
-  pool: 5
-  username: postgres
-  password: password
-  host: localhost
+  url: <%= ENV['DATABASE_URL'] %>
